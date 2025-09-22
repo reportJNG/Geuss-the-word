@@ -1,10 +1,11 @@
-import { useState } from "react"
+"use client";
+import { useState } from "react";
 import styles from "./Play.module.css"
 
 export default function Play() {
-  [Name,setName]=useState('');
+  const [Name,setName] = useState ('') ;
   const Play = () =>{
-    if (Name.lenght < 3 || Name.lenght >26 ) { 
+    if (Name.lenght < 2 || Name.lenght >25 ) { 
       setName('Player');
      }
     
@@ -17,7 +18,7 @@ export default function Play() {
           <p>Test your vocabulary skills and unlock the mystery word!</p>
         </div>
         <div className={styles.Inp}>
-          <input type="text" required maxLength={26} minLength={3} value={Name} placeholder="Name ..."/>
+          <input type="text" required maxLength={26} minLength={3} value={Name} onChange={(e)=>setName(e.target.value)} placeholder="Name ..."/>
         </div>
         <div className={styles.btn}>
           <button className={styles.playButton}   onClick={Play}>
