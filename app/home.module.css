@@ -1,0 +1,19 @@
+.main {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto; /* Allow scrolling but scrollbar will be hidden by global styles */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide webkit scrollbars for the main container */
+.main::-webkit-scrollbar {
+  display: none;
+}
