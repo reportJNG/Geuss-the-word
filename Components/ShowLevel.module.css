@@ -1,0 +1,50 @@
+/* Main container: center content vertically and horizontally */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 7rem;
+  color: #ff9b4d; /* warm accent color */
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+/* Main title */
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #ff9b4d, #ffaa66, #ffcc88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Level text */
+.level {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Number inside level */
+.number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffaa44, #ff9933);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #ffd89b;
+  margin-top: 0.5rem;
+}

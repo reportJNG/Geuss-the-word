@@ -1,0 +1,97 @@
+/* Main container */
+.container {
+  display: flex;
+  left: 0;top: 0; right: 0;
+  
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1b1b1b 0%, #3e1f0d 60%, #d86f1b 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+/* Logo on the left */
+.logo {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ff9b4d;
+  box-shadow: 0 0 10px rgba(255, 155, 77, 0.4);
+}
+
+.logo:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(255, 155, 77, 0.6);
+}
+
+/* Navigation links */
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff9b4d, #ffb16c);
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: #ffb16c;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Player info container */
+.player {
+    margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .container {
+    padding: 0.8rem 1rem;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
