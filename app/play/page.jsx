@@ -4,11 +4,10 @@ import About from '../../Components/About'
 import DotGrid from "../../Components/DotGrid"
 import ShowLevel from "../../Components/ShowLevel"
 import ButtonStart from "../../Components/ButtonStart"
-import { useState } from 'react'
+import { useLevel } from '../Context/LevelContext';
 
 export default function Start (){
-        const [level,setLevel]=useState(0);
-        const [isactive,setIsActive]=useState(false);
+        const {level,setLevel} = useLevel();
     return(
         
 <div>
@@ -42,12 +41,12 @@ export default function Start (){
       </section>  
         
         <section id="ButtonStart">
-        <ButtonStart isactive={isactive} setIsActive={setIsActive}/>
+        <ButtonStart />
       </section> 
          
         </section>
 
-
+       
       <section id="about">
         <About />
       </section>
