@@ -1,5 +1,6 @@
 import styles from './Keybored.module.css';
 import { useCallback } from "react";
+"use client"
 
 export default function Keybored({ setWord, setTries, setWords }) {
   const letters = [

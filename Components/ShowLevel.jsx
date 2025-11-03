@@ -1,4 +1,5 @@
 import styles from './ShowLevel.module.css';
+"use client"
 
 export default function ShowLevel({ level }) {
   
