@@ -6,7 +6,7 @@ import Keybored from "@/Components/Keybored";
 import { useLevel } from "@/app/Context/LevelContext";
 import DotGrid from "../../../Components/DotGrid"
 import ShowLevel from '@/Components/ShowLevel';
-import Backwardsbutton from '@/Components/mini-Components/backwardsbutton';
+import Backwardsbutton from "@/Components/mini-Components/Backwardsbutton";
 import { useRouter } from 'next/navigation';
 
 export default function Playing(){
