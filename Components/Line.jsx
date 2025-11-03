@@ -1,28 +1,28 @@
-import styles from './Line.module.css';
+"use client"
+import styles from "./Line.module.css";
 
-export default function Line({arw}){
+export default function Line({ arw, secret }) {
 
-    return(
-        <div className={styles.container}>
+  return (
+    <div className={styles.line}>
+      {Array.from({length: 5}).map((_,i)=>{
+        
+        const letter = arw[i] ? arw[i].toUpperCase() : "";
 
-            <div className={styles.box}>
-                <div className={styles.square}>
-                    {arw[0]}
-                </div>
-                <div className={styles.square}>
-                    {arw[1]}
-                </div>
-                <div className={styles.square}>
-                    {arw[2]}
-                </div>
-                <div className={styles.square}>
-                    {arw[3]}
-                </div>
-                <div className={styles.square}>
-                    {arw[4]}
-                </div>
-            </div>
+        let state = "empty"; 
+        
+        if(letter){
+          if(letter === secret[i]) state = "correct"; 
+          else if(secret.includes(letter)) state = "exist"; 
+          else state = "wrong";
+        }
 
-        </div>
-    )
+        return (
+          <div key={i} className={`${styles.square} ${styles[state]}`}>
+            {letter}
+          </div>
+        )
+      })}
+    </div>
+  )
 }

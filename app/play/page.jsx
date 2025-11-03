@@ -5,7 +5,6 @@ import DotGrid from "../../Components/DotGrid"
 import ShowLevel from "../../Components/ShowLevel"
 import ButtonStart from "../../Components/ButtonStart"
 import { useLevel } from '../Context/LevelContext';
-
 export default function Start (){
         const {level,setLevel} = useLevel();
     return(

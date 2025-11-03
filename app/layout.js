@@ -1,4 +1,6 @@
 import  { LevelProvider } from "./Context/LevelContext";
+import { NameProvider } from "@/app/Context/NameContext"
+
 
 export const metadata = {
   title: 'Next.js',
@@ -11,9 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head/>
       <body>
+        <NameProvider>
         <LevelProvider>
         {children}
         </LevelProvider>
+        </NameProvider>
         </body>
     </html>
   )

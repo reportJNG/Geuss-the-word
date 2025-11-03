@@ -1,11 +1,8 @@
 'use client';
-import { useSearchParams } from 'next/navigation';
-import Image from 'next/image'
 import styles from './PlayerInfo.module.css';
+import { useName } from '../app/Context/NameContext';
 export default function PlayerInfo (){
-const usesearch = useSearchParams();
-    let test = usesearch.get('name') ?? '';
-   const name = test.trim().length<3 || test.trim().length>10 ? 'Player':test.trim();
+const {name,setName}=useName()
     return(
         <div className={styles.container}>
                 <div className={styles.color}>

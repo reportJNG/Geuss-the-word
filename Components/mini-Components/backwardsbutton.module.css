@@ -1,0 +1,75 @@
+.container {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 9999;
+}
+
+/* Main circular button */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: radial-gradient(circle at 30% 30%, #111 0%, #0a0a0a 100%);
+  color: #00bfff;
+  font-size: 1.8rem;
+  box-shadow:
+    0 0 10px rgba(0, 191, 255, 0.25),
+    inset 0 0 10px rgba(255, 255, 255, 0.05),
+    0 6px 15px rgba(0, 0, 0, 0.7);
+  transition: all 0.25s ease;
+}
+
+/* Glow hover effect */
+.button:hover {
+  color: #66e0ff;
+  font-size: 1.9rem;
+  box-shadow:
+    0 0 25px rgba(0, 191, 255, 0.5),
+    inset 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+/* Pressed (active) */
+.button:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 0 8px rgba(0, 191, 255, 0.4),
+    inset 0 0 5px rgba(0, 191, 255, 0.3);
+}
+
+/* Subtle breathing glow animation */
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(0, 191, 255, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.25);
+  }
+}
+
+.button {
+  animation: breathe 2.5s infinite ease-in-out;
+}
+
+/* Small screen version */
+@media (max-width: 700px) {
+  .container {
+    top: 15px;
+    left: 15px;
+  }
+
+  .button {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+}

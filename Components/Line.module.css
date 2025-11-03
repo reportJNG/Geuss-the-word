@@ -1,0 +1,33 @@
+.line{
+  display:flex;
+  gap:5px;
+}
+
+.square{
+  width:55px;
+  height:55px;
+  border-radius:5px;
+  font-size:28px;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:2px solid #222;
+}
+
+/* states */
+.correct{
+  background:green;
+  color:white;
+}
+.exist{
+  background:gold;
+  color:white;
+}
+.wrong{
+  background:#4f4f4f;
+  color:white;
+}
+.empty{
+  background:#1c1c1c;
+}
